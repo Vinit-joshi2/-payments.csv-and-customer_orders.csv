@@ -37,29 +37,29 @@ GROUP BY order_status;
 SELECT order_status, ROUND(SUM(order_amount), 2) AS Total_Order_Amount
 FROM company.customer_orders
 GROUP BY order_status;
-
 ```
 
 <h4>📉 Average Order Amount by Order Status</h4>
+
 ```sql
 SELECT order_status, ROUND(AVG(order_amount), 2) AS Total_Order_Amount
 FROM company.customer_orders
 GROUP BY order_status;
 ```
-<hr /> <h3>📅 Monthly Trends</h3> <h4>🗓️ Total Number of Orders Per Month</h4>
+
+
+<hr/> <h3>📅 Monthly Trends</h3> <h4>🗓️ Total Number of Orders Per Month</h4>
 
 ```sql
 SELECT MONTHNAME(order_date) AS month, COUNT(*) AS Number_of_order
 FROM company.customer_orders
 GROUP BY MONTHNAME(order_date)
 ORDER BY MONTHNAME(order_date);
-
 ```
 
 <h4>📈 Total Sales Over Time (Monthly)</h4>
 
 ```sql
-
 USE company;
 
 SELECT MONTHNAME(order_date) AS month, ROUND(SUM(order_amount), 2)
@@ -85,8 +85,6 @@ SELECT MONTHNAME(order_date) AS month, ROUND(AVG(order_amount), 2) AS monthly_re
 FROM company.customer_orders
 GROUP BY MONTHNAME(order_date), order_status
 ORDER BY 1, 3;
-
-
 ```
 
 
@@ -97,7 +95,6 @@ SELECT MONTHNAME(order_date) AS month, COUNT(*) AS monthly_revenue, order_status
 FROM company.customer_orders
 GROUP BY MONTHNAME(order_date), order_status
 ORDER BY 1, 3;
-
 ```
 
 
