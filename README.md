@@ -139,6 +139,7 @@ order by 2
 Monthly Revenue :
 </h4>
 
+
 - December: 290,955.89
 
 - September: 294,622.98
@@ -173,7 +174,7 @@ Monthly Revenue :
 
 - March and April also performed well, maintaining consistent revenue trends.
 
-- The lowest revenue was recorded in December (290,955.89), potentially indicating reduced year-end activity or clearance periods.
+- The lowest revenue was recorded in December (290,955.89), potentially indicating reduced year-end activity 
 
 - Mid-year months like June, July, and August had steady but moderate contributions to overall revenue.
 
@@ -218,7 +219,7 @@ Consistent Ranges:
 
 - Most months have average order values between 240–260, suggesting pricing consistency.
 
-- Pending orders tend to have slightly higher average values in months like June, February, and November, possibly reflecting premium items waiting confirmation.
+- Pending orders tend to have slightly higher average values in months like June, February, and November
 
 <h4>
 	
@@ -277,7 +278,7 @@ Key Insights:
  Shipped vs Delivered Trends:
 </h5>
 
-- In most months, the number of Shipped orders closely follows Delivered, indicating a smooth transition in the order pipeline.
+- In most months, the number of Shipped orders closely follows Delivered, indicating a smooth transition in the order
 
 - Example: April – 437 Delivered vs. 444 Shipped
 
@@ -287,7 +288,7 @@ Key Insights:
 </h5>
 
 
-- February had the highest Pending orders (488), suggesting either delays or seasonal spikes in order placement.
+- February had the highest Pending orders (488), suggesting either delays or seasonal spikes in order placement
 
 
  <h3>💰 Overall Revenue Summary</h3> <h4>🔢 Total Revenue</h4>
