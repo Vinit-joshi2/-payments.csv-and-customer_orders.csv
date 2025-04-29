@@ -121,8 +121,28 @@ specific cohort made repeat purchases in subsequent months.</li>
 
 <p>Each row represents a cohort (e.g., customers who joined in January), and each column represents the number of months since their first purchase (Month 0, 1, 2, etc.). The cell values show how many customers from the cohort returned in that month, with color intensity indicating retention strength — darker cells reflect higher retention.</p>
 
+<h2>📊 Month 1 Retention Heatmap Analysis</h2>
+<p>
+	
+In the Month 1 row of the customer retention heatmap, we observe how many customers from each monthly cohort returned in the month following their first purchase.
+</p>
+<ul>
+<li>
+	
+July shows the highest Month 1 retention, with 22 returning customers, suggesting strong engagement or follow-up strategy during that period.
+</li>	
 
-<p>For example, if the January cohort has a value of 27 in Month 0 and 16 in Month 1, it means 27 customers made their first purchase in January, and 16 of them returned in February — a 59% Month-1 retention rate. This visual pattern helps identify churn trends, strong engagement periods, and opportunities for improving long-term customer loyalty.</p>
+<li>
+	
+March has the lowest return rate (5), indicating a potential churn issue or seasonal factor that needs further investigation.
+</li>
+
+
+<li>
+	
+Overall, retention fluctuates across the year, with moderate returns in most months (14–20), and noticeable drops in February (11) and November (9).
+</li>
+</ul>
 
 
 
