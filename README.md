@@ -223,33 +223,63 @@ order by 1;
 	
 Key Insights:
 </h4>
-<ul>
 
- <li>
+ <h5>
 	 
 Highest Transactions (March & January):
+ </h5>
+
+<ul>
 <li>
 	
-🔹 March had the highest total number of completed payments (500) with a total value of $125,965.84, followed by January (487) worth $120,101.16.
+ March had the highest total number of completed payments (500) with a total value of 125,965.84, followed by January (487) worth 120,101.16.
 </li>
 
 <li>
 	
 These months also had a significant number of failed and pending payments, indicating high transactional activity overall.
 </li>
+
+</ul>	
+
+<h5>
+	
+Lowest Completed Revenue:
+</h5>
+
+<ul>
+
+ <li>
+	 
+ November saw the lowest revenue from completed payments at just 89,252.88, suggesting decreased successful payment activity that month.
+ </li>
+</ul>
+
+<h5>
+	
+Balanced Payment Distribution:
+</h5>
+
+<ul>
+<li>
+	
+	
+Each month had a fairly even split between completed, failed, and pending payments, each hovering around 2.5% to 3.3% of the total transaction volume.
+</li>
+</ul>
+
+<h5>
+	
+Revenue Risks:
+</h5>
+
+<ul>
+
+ <li>
+	 
+ In many months, the sum of failed and pending payments is either equal to or exceeds that of completed ones, highlighting a risk of revenue leakage or delayed cash flow.
  </li>
 
-Lowest Completed Revenue:
-
-🔹 November saw the lowest revenue from completed payments at just $89,252.88, suggesting decreased successful payment activity that month.
-
-Balanced Payment Distribution:
-
-Each month had a fairly even split between completed, failed, and pending payments, each hovering around 2.5% to 3.3% of the total transaction volume.
-
-Revenue Risks:
-
-🔸 In many months, the sum of failed and pending payments is either equal to or exceeds that of completed ones, highlighting a risk of revenue leakage or delayed cash flow.
 </ul>
 
 
