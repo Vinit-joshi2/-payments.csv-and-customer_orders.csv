@@ -116,5 +116,13 @@ specific cohort made repeat purchases in subsequent months.</li>
 	<li>Use a suitable BI visualization tool to present your findings.</li>
 	<li> Clearly explain how the visualization tracks customer retention.</li>
 </ul>
+<h2>📊 Customer Retention Heatmap – Insight</h2>
+<p>The customer retention heatmap visualizes how many customers from each cohort (grouped by their first purchase month) return and make repeat purchases in the following months.</p>
+
+<p>Each row represents a cohort (e.g., customers who joined in January), and each column represents the number of months since their first purchase (Month 0, 1, 2, etc.). The cell values show how many customers from the cohort returned in that month, with color intensity indicating retention strength — darker cells reflect higher retention.</p>
+
+
+<p>For example, if the January cohort has a value of 27 in Month 0 and 16 in Month 1, it means 27 customers made their first purchase in January, and 16 of them returned in February — a 59% Month-1 retention rate. This visual pattern helps identify churn trends, strong engagement periods, and opportunities for improving long-term customer loyalty.</p>
+
 
 
