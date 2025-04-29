@@ -305,6 +305,33 @@ order by 1;
 
 ```
 
+<h4>
+	
+ Key Insights:
+</h4>
+
+ **Bank Transfer:**
+- Completed: 1,635 transactions (10.90%)
+- Failed: 1,758 transactions (11.72%)
+- Pending: 1,712 transactions (11.41%)
+-  Slightly higher failure and pending rates than completions indicate potential reliability issues.
+
+ **Credit Card:**
+- Completed: 1,663 transactions (11.09%)
+- Failed: 1,666 transactions (11.11%)
+- Pending: 1,647 transactions (10.98%)
+- ⚖ Very balanced distribution across all statuses, but no clear advantage in performance.
+
+ **PayPal:**
+- Completed: 1,693 transactions (11.29%)
+- Failed: 1,579 transactions (10.53%)
+- Pending: 1,647 transactions (10.98%)
+-  Slightly better success rate compared to the other methods, with fewer failures.
+
+
+
+
+
 <h4>Total revenue by payment method</h4>
 
 ```sql
