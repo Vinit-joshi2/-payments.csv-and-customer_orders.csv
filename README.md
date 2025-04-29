@@ -134,9 +134,12 @@ select
     count(distinct customer_id) as unique_customers
  from customer_orders
  group by monthname(order_date)
+ order by count(distinct customer_id) desc
 ;
 ```
 <p>This query reveals how many unique customers placed orders each month, helping us understand customer engagement over time.</p>
+
+<h4> Insight:</h4> <ul> <li> <strong>January</strong> recorded the highest number of unique customers, with approximately <strong>1,359</strong> customers placing orders.</li> <li> In contrast, <strong>November</strong> had the lowest unique customer count, with around <strong>1,073</strong> customers.</li> <li> This variation may indicate seasonal trends, marketing impact, or customer retention dynamics during the year.</li> </ul>
 
 
 <h4>
