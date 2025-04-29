@@ -7,7 +7,7 @@
 
 <h2>📊 SQL Analysis</h2>
 
-<h3>✅ Order Sales Analysis</h3>
+<h1> Order Sales Analysis</h1>
 
 <h4>🔢 Count of Orders by Order Status</h4>
 
@@ -64,7 +64,8 @@ order by 2;
 
 ```
 
-<hr /> <h3>📌 Monthly and Status Insights</h3> <h4>💵 Monthly Revenue Based on Order Status</h4>
+
+<h3>📌 Monthly and Status Insights</h3> <h4>💵 Monthly Revenue Based on Order Status</h4>
 
 ```sql
 select monthname(order_date)  as month , round(avg(order_amount),2)  as monthly_revenue , 
@@ -87,16 +88,16 @@ order by 1,3;
 ```
 
 
-<hr /> <h3>💰 Overall Revenue Summary</h3> <h4>🔢 Total Revenue</h4>
+ <h3>💰 Overall Revenue Summary</h3> <h4>🔢 Total Revenue</h4>
 
 ```sql
 select sum(order_amount) as total_revenue  from customer_orders;
 
 ```
-<hr>
 
 
-<h3>✅ Cutomer Anlysis</h3>
+
+<h1> Cutomer Anlysis</h1>
 
 
 <h4> Count of Customers Placing More Than One Order</h4>
@@ -160,6 +161,108 @@ group by o.customer_id
 ```
 <p>This query joins orders and payments data to calculate how much each customer has spent in total, and segments them based on their spending behavior.</p>
 
+
+
+<h1> Payment Status Analysis</h1>
+
+<p>This section investigates payment success and failure trends using SQL queries. The goal is to understand the effectiveness of payment processing, success rates, failure patterns, and the impact across different payment methods.</p>
+
+<hr />
+
+<h3>🔍 Overall Payment Status</h3>
+
+<h4> Total Number of Successful and Failed Payments</h4>
+
+```sql
+select payment_status , count(*) as total_payments from payments
+group by payment_status;
+```
+
+<h4>How many percentage of payments successed or failed</h4>
+
+```sql
+select payment_status , round(count(*) / (select count(*) from payments)*100,2) as total_percent_payments from payments
+group by payment_status;
+
+```
+<h4>Payment Amount by sales</h4>
+
+```sql
+select payment_status , sum(payment_amount) as total_payments from payments
+group by payment_status;
+```
+
+<h4>Trck sucess or failue rates monthly</h4>
+
+```sql
+SELECT 
+	monthname(payment_date) as month,
+    payment_status,
+    count(*) as total_transaction,
+    round(count(*) / (select count(*) from payments)*100,2) as total_percent_payments,
+    sum(payment_amount) as total_amount
+
+FROM company.payments
+group by monthname(payment_date) , payment_status
+order by 1;
+```
+
+<h4>Hom many payments done by differnt differnt paymnet platform by paymnet_status</h4>
+
+```sql
+select 
+	payment_method,
+    payment_status,
+    count(*) as total_transaction,
+    round(count(*) / (select count(*) from payments)*100,2) as total_percent_payments
+from payments
+group by payment_method,
+			payment_status
+order by 1;
+
+```
+
+<h4>Total revenue by payment method</h4>
+
+```sql
+
+select payment_method,
+		sum(payment_amount) as total_revenue,
+        payment_status
+from payments
+where payment_status = 'completed'
+group by payment_method , payment_status;
+
+```
+
+<h4>Percent method Failure rate </h4>
+
+```sql
+select 
+	payment_method ,
+    round(count(*) / (select count(*) from payments)*100,2) as total_percent_payments_failure,
+    payment_status
+    
+from payments
+where payment_status = 'failed'
+group by payment_method , payment_status
+```
+
+
+<h4>Percent method Completed rate </h4>
+
+```sql
+select 
+	payment_method ,
+    round(count(*) / (select count(*) from payments)*100,2) as total_percent_payments_failure,
+    payment_status
+    
+from payments
+where payment_status = 'completed'
+group by payment_method , payment_status
+
+
+```
 
 <hr>
 
