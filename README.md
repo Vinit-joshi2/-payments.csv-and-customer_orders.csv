@@ -320,7 +320,7 @@ order by 1;
 - Completed: 1,663 transactions (11.09%)
 - Failed: 1,666 transactions (11.11%)
 - Pending: 1,647 transactions (10.98%)
-- ⚖ Very balanced distribution across all statuses, but no clear advantage in performance.
+-  Very balanced distribution across all statuses, but no clear advantage in performance.
 
  **PayPal:**
 - Completed: 1,693 transactions (11.29%)
@@ -344,6 +344,24 @@ where payment_status = 'completed'
 group by payment_method , payment_status;
 
 ```
+
+<h4>
+	
+Total Revenue by Payment Method (Completed Payments Only)
+</h4>
+- PayPal: ₹426,002.70
+
+- Credit Card: ₹416,296.23
+
+- Bank Transfer: ₹414,786.22
+
+<h4>
+	
+ Insight:
+
+</h4>
+
+- PayPal generated the highest completed payment revenue, suggesting it is the most effective channel for successful transactions.
 
 <h4>Percent method Failure rate </h4>
 
