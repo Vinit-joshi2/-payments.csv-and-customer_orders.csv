@@ -16,6 +16,25 @@ SELECT order_status , count(*) as Total_No_of_orders  FROM company.customer_orde
 group by  order_status
 ;
 ```
+<h4>
+	
+Results:
+</h4>
+
+- Pending: 5,069
+
+- Delivered: 5,057
+
+- Shipped: 4,874
+
+<h4>
+	
+ Insight:
+</h4>
+
+- The number of pending orders (5,069) slightly exceeds delivered orders (5,057), suggesting a minor processing backlog.
+
+- Shipped orders (4,874) are the lowest, indicating many orders are still awaiting shipment or delivery.
 
 <h4>💰 Total Order Amount by Order Status</h4>
 
@@ -33,6 +52,25 @@ group by  order_status
 ;
 ```
 
+<h4>
+	
+Results:
+</h4>
+
+- Pending: 252.20
+
+- Delivered: 254.03
+
+- Shipped: 255.62
+<h4>
+	
+ Insight:
+</h4>
+
+- The average order amount is quite similar across all status, with shipped orders having the highest average value at 255.62.
+
+- Pending orders have a slightly lower average order amount at 252.20, which may indicate that orders in the "pending" status are often smaller in size or are more recent.
+
 
 <hr/> <h3>📅 Monthly Trends</h3> <h4>🗓️ Total Number of Orders Per Month</h4>
 
@@ -42,6 +80,48 @@ from company.customer_orders
 group by monthname(order_date)
 order by monthname(order_date);
 ```
+
+<h4>
+	
+Results:
+</h4>
+
+- April: 1,334
+
+- August: 1,199
+
+December: 1,149
+
+- February: 1,331
+
+- January: 1,469
+
+- July: 1,215
+
+- June: 1,181
+
+- March: 1,407
+
+- May: 1,209
+
+- November: 1,164
+
+- October: 1,193
+
+- September: 1,149
+
+<h4>
+	
+ Insight:
+</h4>
+
+- January saw the highest order volume (1,469 orders), indicating strong demand at the start of the year.
+
+- December and September recorded the lowest order counts (1,149 each), suggesting seasonal slowdowns 
+
+- Months like March (1,407) and April (1,334) also performed well, while mid-year months like June (1,181) and August (1,199) were comparatively quieter.
+
+
 
 <h4>📈 Total Sales Over Time (Monthly)</h4>
 
@@ -53,6 +133,50 @@ group by monthname(order_date)
 order by 2
 ;
 ```
+
+<h4>
+	
+Monthly Revenue :
+</h4>
+
+- December: 290,955.89
+
+- September: 294,622.98
+
+- November: 296,068.76
+
+- October: 298,741.37
+
+- July: 302,465.68
+
+- June: 303,485.24
+
+- May: 305,350.52
+
+- August: 307,292.11
+
+- February: 339,657.57
+
+- April: 341,095.06
+
+- March: 360,870.01
+
+- January: 368,294.00
+
+<h4>
+	
+ Insights:
+</h4>
+
+
+- January had the highest revenue with 368,294, showing strong customer spending at the beginning of the year.
+
+- March and April also performed well, maintaining consistent revenue trends.
+
+- The lowest revenue was recorded in December (290,955.89), potentially indicating reduced year-end activity or clearance periods.
+
+- Mid-year months like June, July, and August had steady but moderate contributions to overall revenue.
+
 
 <h4>📊 Average Sales Over Time (Monthly)</h4>
 
@@ -75,6 +199,39 @@ group by monthname(order_date) , order_status
 order by 1,3;
 ```
 
+<h4>
+	
+Highest Average Order Value:
+</h4>
+
+- February (Pending): 269.17 — Possibly due to high-value orders awaiting processing.
+
+- December (Delivered): 265.08 — Strong end-of-year fulfillment performance.
+
+- November (Shipped): 264.55 — Indicates good order processing ahead of delivery.
+
+<h4>
+	
+Consistent Ranges:
+</h4>
+
+
+- Most months have average order values between 240–260, suggesting pricing consistency.
+
+- Pending orders tend to have slightly higher average values in months like June, February, and November, possibly reflecting premium items waiting confirmation.
+
+<h4>
+	
+Lowest Average Order Value:
+</h4>
+
+
+- February (Delivered): 237.13
+
+- October (Pending): 239.07
+
+
+
 
 <h4>🧾 Monthly Orders Based on Order Status</h4>
 
@@ -86,6 +243,51 @@ group by monthname(order_date) , order_status
 order by 1,3;
 
 ```
+
+
+
+<h4>
+	
+Key Insights:
+</h4>
+
+<h5>
+	
+ January recorded the highest order volume overall, with:
+</h5>
+
+
+- 516 Delivered
+
+- 468 Pending
+
+- 485 Shipped
+
+<h5>
+	
+ November and September had comparatively lower activity:
+</h5>
+
+- November: 423 Delivered, 373 Pending, 368 Shipped
+
+- September: 399 Delivered, 364 Pending, 386 Shipped
+
+<h5>
+	
+ Shipped vs Delivered Trends:
+</h5>
+
+- In most months, the number of Shipped orders closely follows Delivered, indicating a smooth transition in the order pipeline.
+
+- Example: April – 437 Delivered vs. 444 Shipped
+
+<h5>
+	
+ Pending Order Peaks:
+</h5>
+
+
+- February had the highest Pending orders (488), suggesting either delays or seasonal spikes in order placement.
 
 
  <h3>💰 Overall Revenue Summary</h3> <h4>🔢 Total Revenue</h4>
