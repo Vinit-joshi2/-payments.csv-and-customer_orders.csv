@@ -97,7 +97,7 @@ select sum(order_amount) as total_revenue  from customer_orders;
 
 
 
-<h1> Cutomer Anlysis</h1>
+<h1> Customer Analysis</h1>
 
 
 <h4> Count of Customers Placing More Than One Order</h4>
@@ -163,7 +163,7 @@ group by o.customer_id
 
 
 
-<h1> Payment Status Analysis</h1>
+<h1> Payment Sales Analysis</h1>
 
 <p>This section investigates payment success and failure trends using SQL queries. The goal is to understand the effectiveness of payment processing, success rates, failure patterns, and the impact across different payment methods.</p>
 
