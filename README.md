@@ -362,7 +362,7 @@ Total Revenue by Payment Method (Completed Payments Only)
 
 </h4>
 
-- PayPal generated the highest completed payment revenue, suggesting it is the most effective channel for successful transactions.
+- PayPal generated the highest completed payment revenue, suggesting it is the most effective method for successful transactions.
 
 <h4>Percent method Failure rate </h4>
 
@@ -376,6 +376,27 @@ from payments
 where payment_status = 'failed'
 group by payment_method , payment_status
 ```
+
+
+<h4>
+	
+Payment Failure Rates by Payment Method
+</h4>
+
+- PayPal: 10.53% failed
+
+- Bank Transfer: 11.72% failed
+
+- Credit Card: 11.11% failed
+
+<h4>
+	
+ Insight:
+</h4>
+
+- Bank Transfer has the highest failure rate among all payment methods
+
+- PayPal has the lowest failure rate, indicating a relatively more stable payment process compared to others.
 
 
 <h4>Percent method Completed rate </h4>
@@ -392,6 +413,25 @@ group by payment_method , payment_status
 
 
 ```
+<h4>
+	
+Payment Completion Rates by Payment Method
+</h4>
+- PayPal: 11.29% completed
+
+- Credit Card: 11.09% completed
+
+- Bank Transfer: 10.90% completed
+
+<h4>
+	
+ Insight:
+</h4>
+
+- PayPal leads in the completion rate, making it the most reliable payment method.
+
+- Credit Card and Bank Transfer have very close completion rates, with PayPal slightly outperforming them.
+
 
 <h1> Order Details Report</h1>
 
