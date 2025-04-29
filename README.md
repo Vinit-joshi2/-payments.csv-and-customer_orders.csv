@@ -21,7 +21,7 @@ We aim to uncover key metrics, revenue patterns, and ordering trends over time t
 
 <h2>📊 SQL Analysis</h2>
 
-<h3>✅ Order Status Analysis</h3>
+<h3>✅ Order Sales Analysis</h3>
 
 <h4>🔢 Count of Orders by Order Status</h4>
 
@@ -110,7 +110,8 @@ select sum(order_amount) as total_revenue  from customer_orders;
 <hr>
 
 
-<h3>  Customer Analysis</h3>
+<h3>✅ Cutomer Anlysis</h3>
+
 
 <h4> Count of Customers Placing More Than One Order</h4>
 
@@ -118,12 +119,12 @@ select sum(order_amount) as total_revenue  from customer_orders;
 select customer_id ,  count(*) as total_order from customer_orders
 group by customer_id
 having count(*) > 1;
-
 ````
 
 <p>This query helps us identify repeat customers who placed more than one order, which is a key indicator of customer retention.</p> 
 
 <h4>Segment customer by order frequency</h4>
+
 ```sql
 select customer_id , 
 	count(*) as total_orders,
@@ -139,6 +140,7 @@ group by customer_id;
 
 
 <h4>How many unqiue customer are ordering per month</h4>
+
 ```sql
 select 
 	monthname(order_date) as month , 
@@ -169,7 +171,6 @@ select
  from  customer_orders o
 join payments p on o.order_id = p.order_id
 group by o.customer_id
-
 ```
 <p>This query joins orders and payments data to calculate how much each customer has spent in total, and segments them based on their spending behavior.</p>
 
