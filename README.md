@@ -349,11 +349,12 @@ group by payment_method , payment_status;
 	
 Total Revenue by Payment Method (Completed Payments Only)
 </h4>
-- PayPal: ₹426,002.70
 
-- Credit Card: ₹416,296.23
+- PayPal: 426,002.70
 
-- Bank Transfer: ₹414,786.22
+- Credit Card: 416,296.23
+
+- Bank Transfer: 414,786.22
 
 <h4>
 	
