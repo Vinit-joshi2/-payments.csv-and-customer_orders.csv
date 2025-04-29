@@ -110,7 +110,12 @@ select sum(order_amount) as total_revenue  from customer_orders;
 
 <h1> VISUALIZATION TASK <h1/>
  <h2> Customer Retention Analysis:</h2>
-	<ul>Visualize customer retention by showing how many customers from a </ul> 
+	<ul>
+		<li>
+  Visualize customer retention by showing how many customers from a 
+			
+		</li>
+	</ul> 
 	<ul>specific cohort made repeat purchases in subsequent months.</ul>
 	<uk>Use a suitable BI visualization tool to present your findings.</uk>
  	<ul>Clearly explain how the visualization tracks customer retention</ul>
