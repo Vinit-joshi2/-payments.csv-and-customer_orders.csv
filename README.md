@@ -264,6 +264,35 @@ group by payment_method , payment_status
 
 ```
 
+<h1> Order Details Report</h1>
+
+<p>This report provides a detailed overview of each customer's order and payment information.  
+ order metrics, payment status, and purchasing behavior to help uncover high-value customers and their payment preferences.</p>
+
+
+<hr />
+
+
+
+<h3>🧾 Comprehensive Order Details per Customer</h3>
+
+```sql
+select 
+	o.customer_id,
+    count(distinct o.order_id) as total_order,
+    sum(o.order_amount) as total_order_value,
+    sum(case when p.payment_status = 'completed' then p.payment_amount else 0  end) as total_paid,
+    round(avg(o.order_amount),2) as avg_order_value,
+    count( distinct p.payment_method) as  payment_method
+  from customer_orders o
+join payments p on o.order_id = p.order_id
+group by o.customer_id
+```
+
+<h2>📌 Insights</h2> <ul> <li> Tracks each customer's total number of orders .</li> <li> Differentiates total order value from actual paid amounts by filtering completed payments only.</li> <li> Measures the variety of payment methods used by each customer.</li> <li> Calculates the average order value per customer – useful for identifying high-ticket buyers.</li> </ul>
+
+
+
 <hr>
 
 
