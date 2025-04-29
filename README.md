@@ -172,7 +172,7 @@ group by o.customer_id
 
 <hr />
 
-<h3>🔍 Overall Payment Status</h3>
+<h3> Overall Payment Status</h3>
 
 <h4> Total Number of Successful and Failed Payments</h4>
 
@@ -180,6 +180,9 @@ group by o.customer_id
 select payment_status , count(*) as total_payments from payments
 group by payment_status;
 ```
+
+<h4> Insight:</h4> <ul> <li> <strong>Completed:</strong> 4,991 payments were successfully processed.</li> <li> <strong>Failed:</strong> 5,003 transactions failed to complete.</li> <li> <strong>Pending:</strong> 5,006 payments remained in a pending state.</li> </ul> <p>This distribution shows a relatively even spread among all payment statuses. The slightly higher number of failed and pending transactions may indicate technical issues, payment gateway problems, or user-related errors that require further investigation.</p>
+
 
 <h4>How many percentage of payments successed or failed</h4>
 
