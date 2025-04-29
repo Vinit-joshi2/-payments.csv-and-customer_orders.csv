@@ -107,6 +107,76 @@ order by 1,3;
 select sum(order_amount) as total_revenue  from customer_orders;
 
 ```
+<hr>
+
+
+<h3>  Customer Analysis</h3>
+
+<h4> Count of Customers Placing More Than One Order</h4>
+
+```sql
+select customer_id ,  count(*) as total_order from customer_orders
+group by customer_id
+having count(*) > 1;
+
+````
+
+<p>This query helps us identify repeat customers who placed more than one order, which is a key indicator of customer retention.</p> 
+
+<h4>Segment customer by order frequency</h4>
+```sql
+select customer_id , 
+	count(*) as total_orders,
+    case
+		when count(*) = 1 then 'One_time'
+        when count(*) between 2 and 4 then 'Occasional'
+        else 'Onece_in_time'
+        end as customer_segment
+from customer_orders
+group by customer_id;
+```
+<p>This analysis classifies customers into segments based on how frequently they place orders</p>
+
+
+<h4>How many unqiue customer are ordering per month</h4>
+```sql
+select 
+	monthname(order_date) as month , 
+    count(distinct customer_id) as unique_customers
+ from customer_orders
+ group by monthname(order_date)
+;
+```
+<p>This query reveals how many unique customers placed orders each month, helping us understand customer engagement over time.</p>
+
+
+<h4>
+	 Total spend per customer
+	-- customer_orders --> customer_id , order_id
+	-- payments --> payment_id , order_id
+</h4>
+
+```sql
+select 
+	o.customer_id , 
+    sum(p.payment_amount) as total_spent,
+    case 
+		when  sum(p.payment_amount) > 500 then 'High spent'
+        when sum(p.payment_amount) between 200 and 400 then  'Medium spent'
+        else 'Low spent'
+        end as value_segment
+        
+ from  customer_orders o
+join payments p on o.order_id = p.order_id
+group by o.customer_id
+
+```
+<p>This query joins orders and payments data to calculate how much each customer has spent in total, and segments them based on their spending behavior.</p>
+
+
+<hr>
+
+
 
 <h1> VISUALIZATION TASK <h1/>
  <h2> Customer Retention Analysis:</h2>
