@@ -144,5 +144,26 @@ Overall, retention fluctuates across the year, with moderate returns in most mon
 </li>
 </ul>
 
+<h2>📊 Month 2 Customer Retention Analysis</h2>
 
+<p>
+	
+Month 2 heatmap values show how many users returned two months after their initial purchase, providing valuable insight into long-term customer engagement:
+</p>
+<ul>
+<li>
+	
+The February cohort had the highest retention (21), signaling effective re-engagement.
+</li>
+
+<li>
+	
+The September cohort showed the lowest retention (8), highlighting potential drop-off points.
+</li>
+<li>
+	
+April to June cohorts demonstrated healthy repeat behavior with 16–19 users returning, which might reflect successful onboarding or post-purchase strategies during that time.
+</li>
+
+</ul>
 
