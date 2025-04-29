@@ -191,12 +191,18 @@ select payment_status , round(count(*) / (select count(*) from payments)*100,2) 
 group by payment_status;
 
 ```
+
+<h4> Insight:</h4> <ul> <li> <strong>Completed:</strong> 4,991 payments (<strong>33.27%</strong>) were successfully processed.</li> <li> <strong>Failed:</strong> 5,003 transactions (<strong>33.35%</strong>) failed.</li> <li> <strong>Pending:</strong> 5,006 payments (<strong>33.37%</strong>) are still awaiting completion.</li> </ul> <p>This balanced distribution highlights that only about one-third of the total payments are successfully processed, with a similarly high rate of failures and pending transactions. This could be a potential red flag for the business, suggesting the need for improvement in the payment processing system.</p>
+
 <h4>Payment Amount by sales</h4>
 
 ```sql
 select payment_status , sum(payment_amount) as total_payments from payments
 group by payment_status;
 ```
+<h4> Insight:</h4> <ul> <li> <strong>Completed:</strong> 1,257,085.15 worth of payments were successfully processed.</li> <li> <strong>Failed:</strong> Transactions worth 1,273,618.69 failed to go through.</li> <li> <strong>Pending:</strong> 1,273,403.02 is still pending and yet to be confirmed.</li> </ul> <p>The high volume of failed and pending payments, the amount associated with completed transactions is slightly lower, indicating a significant portion of revenue is currently either lost or delayed. This insight is crucial for identifying revenue leakage and improving transaction success rates.</p>
+
+
 
 <h4>Trck sucess or failue rates monthly</h4>
 
@@ -212,6 +218,47 @@ FROM company.payments
 group by monthname(payment_date) , payment_status
 order by 1;
 ```
+
+<h4>
+	
+Key Insights:
+</h4>
+<ul>
+
+ <li>
+	 
+Highest Transactions (March & January):
+<li>
+	
+🔹 March had the highest total number of completed payments (500) with a total value of $125,965.84, followed by January (487) worth $120,101.16.
+</li>
+
+<li>
+	
+These months also had a significant number of failed and pending payments, indicating high transactional activity overall.
+</li>
+ </li>
+
+Lowest Completed Revenue:
+
+🔹 November saw the lowest revenue from completed payments at just $89,252.88, suggesting decreased successful payment activity that month.
+
+Balanced Payment Distribution:
+
+Each month had a fairly even split between completed, failed, and pending payments, each hovering around 2.5% to 3.3% of the total transaction volume.
+
+Revenue Risks:
+
+🔸 In many months, the sum of failed and pending payments is either equal to or exceeds that of completed ones, highlighting a risk of revenue leakage or delayed cash flow.
+</ul>
+
+
+
+
+
+
+
+
 
 <h4>Hom many payments done by differnt differnt paymnet platform by paymnet_status</h4>
 
