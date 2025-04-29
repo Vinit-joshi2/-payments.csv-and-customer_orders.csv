@@ -1,23 +1,9 @@
-# -payments.csv-and-customer_orders.csv
+# -payments-and-customer_orders.
 
 <h1>📦 Order and Sales Analysis</h1>
 
-<p>This analysis focuses on exploring order status and sales performance using SQL queries.  
-We aim to uncover key metrics, revenue patterns, and ordering trends over time to support better business decisions.</p>
 
-<hr />
-
-<h2>🗂️ Dataset Overview</h2>
-
-<p>The data is sourced from the <code>company.customer_orders</code> table, containing:</p>
-
-<ul>
-  <li><code>order_date</code> - Date when the order was placed</li>
-  <li><code>order_status</code> - Status of the order (Completed, Pending, Cancelled, etc.)</li>
-  <li><code>order_amount</code> - Total monetary value of the order</li>
-</ul>
-
-<hr />
+<hr/>
 
 <h2>📊 SQL Analysis</h2>
 
