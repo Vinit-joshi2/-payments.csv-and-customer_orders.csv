@@ -723,7 +723,7 @@ The September cohort showed the lowest retention (8), highlighting potential dro
 </li>
 <li>
 	
-April to June cohorts demonstrated healthy repeat behavior with 16–19 users returning, which might reflect successful onboarding or post-purchase strategies during that time.
+April to June cohorts demonstrated healthy repeat behavior with 16–19 users returning
 </li>
 
 </ul>
