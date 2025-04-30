@@ -714,7 +714,7 @@ Month 2 heatmap values show how many users returned two months after their initi
 <ul>
 <li>
 	
-The February cohort had the highest retention (21), signaling effective re-engagement.
+The February cohort had the highest retention (21)
 </li>
 
 <li>
